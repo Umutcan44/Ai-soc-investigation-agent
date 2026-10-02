@@ -1,0 +1,393 @@
+{
+  "comparison": [
+    {
+      "feature": "Max Packet Length",
+      "label": "ATTACK",
+      "median_2017": 6.0,
+      "median_2018": 0.0,
+      "normalized_median_gap": 1.0
+    },
+    {
+      "feature": "Packet Length Mean",
+      "label": "ATTACK",
+      "median_2017": 6.0,
+      "median_2018": 0.0,
+      "normalized_median_gap": 1.0
+    },
+    {
+      "feature": "Packet Length Std",
+      "label": "ATTACK",
+      "median_2017": 3.464101615,
+      "median_2018": 0.0,
+      "normalized_median_gap": 1.0
+    },
+    {
+      "feature": "Packet Length Variance",
+      "label": "ATTACK",
+      "median_2017": 12.0,
+      "median_2018": 0.0,
+      "normalized_median_gap": 1.0
+    },
+    {
+      "feature": "Average Packet Size",
+      "label": "ATTACK",
+      "median_2017": 7.5,
+      "median_2018": 0.0,
+      "normalized_median_gap": 1.0
+    },
+    {
+      "feature": "Bwd Packet Length Max",
+      "label": "ATTACK",
+      "median_2017": 6.0,
+      "median_2018": 0.0,
+      "normalized_median_gap": 1.0
+    },
+    {
+      "feature": "Bwd Packet Length Mean",
+      "label": "ATTACK",
+      "median_2017": 6.0,
+      "median_2018": 0.0,
+      "normalized_median_gap": 1.0
+    },
+    {
+      "feature": "Avg Bwd Segment Size",
+      "label": "ATTACK",
+      "median_2017": 6.0,
+      "median_2018": 0.0,
+      "normalized_median_gap": 1.0
+    },
+    {
+      "feature": "Subflow Fwd Bytes",
+      "label": "ATTACK",
+      "median_2017": 24.0,
+      "median_2018": 0.0,
+      "normalized_median_gap": 1.0
+    },
+    {
+      "feature": "Destination Port",
+      "label": "BENIGN",
+      "median_2017": 80.0,
+      "median_2018": 443.0,
+      "normalized_median_gap": 0.8194130925507901
+    },
+    {
+      "feature": "Packet Length Variance",
+      "label": "BENIGN",
+      "median_2017": 750.0,
+      "median_2018": 1408.3333333333,
+      "normalized_median_gap": 0.46745562130176255
+    },
+    {
+      "feature": "Packet Length Std",
+      "label": "BENIGN",
+      "median_2017": 27.38612788,
+      "median_2018": 37.5277674973,
+      "normalized_median_gap": 0.27024361675736924
+    },
+    {
+      "feature": "Subflow Fwd Bytes",
+      "label": "BENIGN",
+      "median_2017": 66.0,
+      "median_2018": 51.0,
+      "normalized_median_gap": 0.22727272727272727
+    },
+    {
+      "feature": "Bwd Packet Length Max",
+      "label": "BENIGN",
+      "median_2017": 83.0,
+      "median_2018": 107.0,
+      "normalized_median_gap": 0.22429906542056074
+    },
+    {
+      "feature": "Max Packet Length",
+      "label": "BENIGN",
+      "median_2017": 91.0,
+      "median_2018": 109.0,
+      "normalized_median_gap": 0.1651376146788991
+    },
+    {
+      "feature": "Average Packet Size",
+      "label": "BENIGN",
+      "median_2017": 74.5,
+      "median_2018": 78.5,
+      "normalized_median_gap": 0.050955414012738856
+    },
+    {
+      "feature": "Bwd Packet Length Mean",
+      "label": "BENIGN",
+      "median_2017": 77.0,
+      "median_2018": 81.0,
+      "normalized_median_gap": 0.04938271604938271
+    },
+    {
+      "feature": "Avg Bwd Segment Size",
+      "label": "BENIGN",
+      "median_2017": 77.0,
+      "median_2018": 81.0,
+      "normalized_median_gap": 0.04938271604938271
+    },
+    {
+      "feature": "Packet Length Mean",
+      "label": "BENIGN",
+      "median_2017": 58.8,
+      "median_2018": 56.333333333333336,
+      "normalized_median_gap": 0.04195011337868472
+    },
+    {
+      "feature": "Bwd Packet Length Std",
+      "label": "BENIGN",
+      "median_2017": 0.0,
+      "median_2018": 0.0,
+      "normalized_median_gap": 0.0
+    },
+    {
+      "feature": "Destination Port",
+      "label": "ATTACK",
+      "median_2017": 80.0,
+      "median_2018": 80.0,
+      "normalized_median_gap": 0.0
+    },
+    {
+      "feature": "Bwd Packet Length Std",
+      "label": "ATTACK",
+      "median_2017": 0.0,
+      "median_2018": 0.0,
+      "normalized_median_gap": 0.0
+    }
+  ],
+  "method": "Descriptive comparison of sampled feature distributions. normalized_median_gap is a project-specific descriptive statistic, not a formal statistical distance metric.",
+  "summary": {
+    "CICIDS2017": {
+      "ATTACK": {
+        "Average Packet Size": {
+          "median": 7.5,
+          "p25": 3.0,
+          "p75": 920.4615385
+        },
+        "Avg Bwd Segment Size": {
+          "median": 6.0,
+          "p25": 0.0,
+          "p75": 1932.5
+        },
+        "Bwd Packet Length Max": {
+          "median": 6.0,
+          "p25": 0.0,
+          "p75": 5792.0
+        },
+        "Bwd Packet Length Mean": {
+          "median": 6.0,
+          "p25": 0.0,
+          "p75": 1932.5
+        },
+        "Bwd Packet Length Std": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 2181.008184
+        },
+        "Destination Port": {
+          "median": 80.0,
+          "p25": 80.0,
+          "p75": 912.0
+        },
+        "Max Packet Length": {
+          "median": 6.0,
+          "p25": 6.0,
+          "p75": 5792.0
+        },
+        "Packet Length Mean": {
+          "median": 6.0,
+          "p25": 2.0,
+          "p75": 854.7142857
+        },
+        "Packet Length Std": {
+          "median": 3.464101615,
+          "p25": 2.309401077,
+          "p75": 1715.75637775
+        },
+        "Packet Length Variance": {
+          "median": 12.0,
+          "p25": 5.333333333,
+          "p75": 2943819.949
+        },
+        "Subflow Fwd Bytes": {
+          "median": 24.0,
+          "p25": 0.0,
+          "p75": 325.0
+        }
+      },
+      "BENIGN": {
+        "Average Packet Size": {
+          "median": 74.5,
+          "p25": 9.0,
+          "p75": 124.279761904775
+        },
+        "Avg Bwd Segment Size": {
+          "median": 77.0,
+          "p25": 2.0,
+          "p75": 152.0
+        },
+        "Bwd Packet Length Max": {
+          "median": 83.0,
+          "p25": 2.0,
+          "p75": 179.0
+        },
+        "Bwd Packet Length Mean": {
+          "median": 77.0,
+          "p25": 2.0,
+          "p75": 152.0
+        },
+        "Bwd Packet Length Std": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "Destination Port": {
+          "median": 80.0,
+          "p25": 53.0,
+          "p75": 443.0
+        },
+        "Max Packet Length": {
+          "median": 91.0,
+          "p25": 6.0,
+          "p75": 219.0
+        },
+        "Packet Length Mean": {
+          "median": 58.8,
+          "p25": 6.0,
+          "p75": 96.8
+        },
+        "Packet Length Std": {
+          "median": 27.38612788,
+          "p25": 0.0,
+          "p75": 93.6605573334
+        },
+        "Packet Length Variance": {
+          "median": 750.0,
+          "p25": 0.0,
+          "p75": 8772.3
+        },
+        "Subflow Fwd Bytes": {
+          "median": 66.0,
+          "p25": 12.0,
+          "p75": 160.0
+        }
+      }
+    },
+    "CSE-CIC-IDS2018": {
+      "ATTACK": {
+        "Average Packet Size": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 65.0
+        },
+        "Avg Bwd Segment Size": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 51.0
+        },
+        "Bwd Packet Length Max": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 112.0
+        },
+        "Bwd Packet Length Mean": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 51.0
+        },
+        "Bwd Packet Length Std": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 53.7672453
+        },
+        "Destination Port": {
+          "median": 80.0,
+          "p25": 80.0,
+          "p75": 80.0
+        },
+        "Max Packet Length": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 326.0
+        },
+        "Packet Length Mean": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 56.875
+        },
+        "Packet Length Std": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 115.4066568
+        },
+        "Packet Length Variance": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 13318.69643
+        },
+        "Subflow Fwd Bytes": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 20.0
+        }
+      },
+      "BENIGN": {
+        "Average Packet Size": {
+          "median": 78.5,
+          "p25": 10.3333333333,
+          "p75": 151.95238095238096
+        },
+        "Avg Bwd Segment Size": {
+          "median": 81.0,
+          "p25": 0.0,
+          "p75": 167.0
+        },
+        "Bwd Packet Length Max": {
+          "median": 107.0,
+          "p25": 0.0,
+          "p75": 488.0
+        },
+        "Bwd Packet Length Mean": {
+          "median": 81.0,
+          "p25": 0.0,
+          "p75": 167.0
+        },
+        "Bwd Packet Length Std": {
+          "median": 0.0,
+          "p25": 0.0,
+          "p75": 244.0
+        },
+        "Destination Port": {
+          "median": 443.0,
+          "p25": 53.0,
+          "p75": 3389.0
+        },
+        "Max Packet Length": {
+          "median": 109.0,
+          "p25": 31.0,
+          "p75": 935.0
+        },
+        "Packet Length Mean": {
+          "median": 56.333333333333336,
+          "p25": 7.75,
+          "p75": 138.95454545451136
+        },
+        "Packet Length Std": {
+          "median": 37.5277674973,
+          "p25": 8.76356092,
+          "p75": 294.83543242207503
+        },
+        "Packet Length Variance": {
+          "median": 1408.3333333333,
+          "p25": 76.8,
+          "p75": 86927.93347953218
+        },
+        "Subflow Fwd Bytes": {
+          "median": 51.0,
+          "p25": 30.0,
+          "p75": 823.25
+        }
+      }
+    }
+  }
+}
