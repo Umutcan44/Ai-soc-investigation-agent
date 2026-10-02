@@ -1,0 +1,46 @@
+{
+  "cicids2017_holdout": {
+    "accuracy": 0.984325,
+    "confusion_matrix": [
+      [
+        19416,
+        584
+      ],
+      [
+        43,
+        19957
+      ]
+    ],
+    "f1": 0.9845341752793468,
+    "pr_auc": 0.9949903462000194,
+    "precision": 0.9715690570079354,
+    "recall": 0.99785,
+    "roc_auc": 0.9971913487499999,
+    "sample_size": 40000
+  },
+  "cse_cic_ids_2018_cross_dataset": {
+    "accuracy": 0.727285,
+    "confusion_matrix": [
+      [
+        92115,
+        7885
+      ],
+      [
+        46658,
+        53342
+      ]
+    ],
+    "f1": 0.6617005836491406,
+    "pr_auc": 0.7978285013567872,
+    "precision": 0.871216946771849,
+    "recall": 0.53342,
+    "roc_auc": 0.8311422181999999,
+    "sample_size": 200000
+  },
+  "experiment": "CICIDS2017_train_to_2018_test",
+  "random_seed": 42,
+  "training": {
+    "dataset": "CICIDS2017",
+    "sample_size": 160000
+  }
+}
