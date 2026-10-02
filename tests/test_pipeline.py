@@ -95,3 +95,32 @@ class TestSOCPipeline(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class TestAIAgent(unittest.TestCase):
+
+    def test_ai_prompt_uses_structured_evidence(self):
+        from src.ai_agent import SYSTEM_PROMPT, build_investigation_prompt
+
+        event = SecurityEvent(
+            event_id="ai-test-001",
+            source="cicids2017",
+            destination_port=22,
+            protocol="TCP",
+            prediction="ATTACK",
+            confidence=0.91,
+            evidence={"failed_login_count": 8},
+        )
+
+        report = investigate_event(event)
+        prompt = build_investigation_prompt(report)
+
+        self.assertIn("ai-test-001", prompt)
+        self.assertIn("T1110", prompt)
+        self.assertIn("Brute Force", prompt)
+        self.assertIn("candidate", prompt)
+        self.assertIn("Do not introduce facts", prompt)
+
+        self.assertIn(
+            "Do not invent indicators",
+            SYSTEM_PROMPT,
+        )
