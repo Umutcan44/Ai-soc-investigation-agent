@@ -1,0 +1,51 @@
+{
+  "cicids2017_holdout": {
+    "accuracy": 0.9823,
+    "confusion_matrix": [
+      [
+        19341,
+        659
+      ],
+      [
+        49,
+        19951
+      ]
+    ],
+    "f1": 0.9825658704752525,
+    "pr_auc": 0.9946582442551142,
+    "precision": 0.9680252304706454,
+    "recall": 0.99755,
+    "roc_auc": 0.996843105,
+    "sample_size": 40000
+  },
+  "cse_cic_ids_2018_holdout": {
+    "accuracy": 0.94335,
+    "confusion_matrix": [
+      [
+        18694,
+        1306
+      ],
+      [
+        960,
+        19040
+      ]
+    ],
+    "f1": 0.9438358201556536,
+    "pr_auc": 0.9601268291734304,
+    "precision": 0.9358104787181756,
+    "recall": 0.952,
+    "roc_auc": 0.96689078875,
+    "sample_size": 40000
+  },
+  "experiment": "combined_2017_2018_training",
+  "random_seed": 42,
+  "training": {
+    "cicids2017_training_flows": 160000,
+    "cse_cic_ids_2018_training_flows": 160000,
+    "datasets": [
+      "CICIDS2017",
+      "CSE-CIC-IDS2018"
+    ],
+    "sample_size": 320000
+  }
+}
