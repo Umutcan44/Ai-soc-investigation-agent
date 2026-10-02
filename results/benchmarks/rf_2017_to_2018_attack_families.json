@@ -1,0 +1,105 @@
+{
+  "attack_sample_size": 100000,
+  "experiment": "CICIDS2017_to_CSE-CIC-IDS2018_attack_family_analysis",
+  "families": [
+    {
+      "attack_label": "Bot",
+      "detected": 0,
+      "detection_rate": 0.0,
+      "missed": 10437,
+      "total": 10437
+    },
+    {
+      "attack_label": "FTP-BruteForce",
+      "detected": 0,
+      "detection_rate": 0.0,
+      "missed": 7005,
+      "total": 7005
+    },
+    {
+      "attack_label": "DoS attacks-SlowHTTPTest",
+      "detected": 0,
+      "detection_rate": 0.0,
+      "missed": 5026,
+      "total": 5026
+    },
+    {
+      "attack_label": "DDOS attack-LOIC-UDP",
+      "detected": 0,
+      "detection_rate": 0.0,
+      "missed": 74,
+      "total": 74
+    },
+    {
+      "attack_label": "SQL Injection",
+      "detected": 0,
+      "detection_rate": 0.0,
+      "missed": 2,
+      "total": 2
+    },
+    {
+      "attack_label": "Infilteration",
+      "detected": 200,
+      "detection_rate": 0.034112229234180454,
+      "missed": 5663,
+      "total": 5863
+    },
+    {
+      "attack_label": "DoS attacks-GoldenEye",
+      "detected": 511,
+      "detection_rate": 0.3342053629823414,
+      "missed": 1018,
+      "total": 1529
+    },
+    {
+      "attack_label": "DDoS attacks-LOIC-HTTP",
+      "detected": 10509,
+      "detection_rate": 0.49793887704335466,
+      "missed": 10596,
+      "total": 21105
+    },
+    {
+      "attack_label": "Brute Force -Web",
+      "detected": 15,
+      "detection_rate": 0.6521739130434783,
+      "missed": 8,
+      "total": 23
+    },
+    {
+      "attack_label": "DDOS attack-HOIC",
+      "detected": 18996,
+      "detection_rate": 0.7632287355860018,
+      "missed": 5893,
+      "total": 24889
+    },
+    {
+      "attack_label": "DoS attacks-Hulk",
+      "detected": 15914,
+      "detection_rate": 0.9445631528964862,
+      "missed": 934,
+      "total": 16848
+    },
+    {
+      "attack_label": "SSH-Bruteforce",
+      "detected": 6806,
+      "detection_rate": 0.9997062279670975,
+      "missed": 2,
+      "total": 6808
+    },
+    {
+      "attack_label": "DoS attacks-Slowloris",
+      "detected": 378,
+      "detection_rate": 1.0,
+      "missed": 0,
+      "total": 378
+    },
+    {
+      "attack_label": "Brute Force -XSS",
+      "detected": 13,
+      "detection_rate": 1.0,
+      "missed": 0,
+      "total": 13
+    }
+  ],
+  "random_seed": 42
+}
