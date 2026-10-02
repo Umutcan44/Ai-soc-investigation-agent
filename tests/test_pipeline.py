@@ -1,6 +1,6 @@
 import unittest
 
-from src.schemas import SecurityEvent
+from src.schemas import SecurityEvent, InvestigationReport
 from src.ioc_extractor import extract_iocs
 from src.enrichment import enrich_event
 from src.investigator import investigate_event
@@ -32,6 +32,7 @@ class TestSOCPipeline(unittest.TestCase):
 
         self.assertIn("192.168.1.25", values)
         self.assertIn("10.0.0.8", values)
+        self.assertIn("51544", values)
         self.assertIn("22", values)
         self.assertIn("TCP", values)
 
@@ -46,16 +47,19 @@ class TestSOCPipeline(unittest.TestCase):
     def test_investigation(self):
         report = investigate_event(self.event)
 
-        self.assertEqual(report["event_id"], "test-001")
-        self.assertEqual(report["prediction"], "ATTACK")
-        self.assertGreater(len(report["findings"]), 0)
-        self.assertGreater(len(report["recommended_actions"]), 0)
+        self.assertIsInstance(report, InvestigationReport)
+        self.assertEqual(report.event_id, "test-001")
+        self.assertEqual(report.triage_status, "requires_review")
+        self.assertEqual(report.severity, "high")
+        self.assertEqual(report.confidence, 0.91)
+        self.assertGreater(len(report.facts), 0)
+        self.assertGreater(len(report.recommended_actions), 0)
 
     def test_mitre_not_assigned_without_behavioral_evidence(self):
         report = investigate_event(self.event)
 
         self.assertEqual(
-            report["mitre_candidates"],
+            report.mitre_candidates,
             [],
         )
 
@@ -77,15 +81,17 @@ class TestSOCPipeline(unittest.TestCase):
         report = investigate_event(event)
 
         self.assertEqual(
-            len(report["mitre_candidates"]),
+            len(report.mitre_candidates),
             1,
         )
 
-        candidate = report["mitre_candidates"][0]
+        candidate = report.mitre_candidates[0]
 
         self.assertEqual(candidate["technique_id"], "T1110")
         self.assertEqual(candidate["technique_name"], "Brute Force")
         self.assertEqual(candidate["status"], "candidate")
         self.assertEqual(candidate["confidence"], "medium")
+
+
 if __name__ == "__main__":
     unittest.main()

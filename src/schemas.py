@@ -36,3 +36,28 @@ class SecurityEvent(BaseModel):
     )
 
     evidence: dict = Field(default_factory=dict)
+class InvestigationReport(BaseModel):
+    event_id: str
+
+    triage_status: Literal[
+        "requires_review",
+        "no_immediate_action",
+        "insufficient_evidence",
+    ]
+
+    severity: Literal[
+        "informational",
+        "low",
+        "medium",
+        "high",
+    ]
+
+    confidence: float | None = Field(
+        default=None,
+        ge=0.0,
+        le=1.0,
+    )
+
+    facts: list[str] = Field(default_factory=list)
+    mitre_candidates: list[dict] = Field(default_factory=list)
+    recommended_actions: list[str] = Field(default_factory=list)
