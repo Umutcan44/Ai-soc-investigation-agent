@@ -1,11 +1,13 @@
 from src.schemas import SecurityEvent
 from src.ioc_extractor import extract_iocs
 from src.enrichment import enrich_event
+from src.mitre_mapper import map_mitre_candidates
 
 
 def investigate_event(event: SecurityEvent) -> dict:
     iocs = extract_iocs(event)
     context = enrich_event(event)
+    mitre_candidates = map_mitre_candidates(event, context)
 
     findings = []
     recommended_actions = []
@@ -45,6 +47,7 @@ def investigate_event(event: SecurityEvent) -> dict:
             for ioc in iocs
         ],
         "context": context,
+        "mitre_candidates": mitre_candidates,
         "findings": findings,
         "recommended_actions": recommended_actions,
     }

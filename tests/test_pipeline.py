@@ -51,6 +51,41 @@ class TestSOCPipeline(unittest.TestCase):
         self.assertGreater(len(report["findings"]), 0)
         self.assertGreater(len(report["recommended_actions"]), 0)
 
+    def test_mitre_not_assigned_without_behavioral_evidence(self):
+        report = investigate_event(self.event)
 
+        self.assertEqual(
+            report["mitre_candidates"],
+            [],
+        )
+
+    def test_mitre_brute_force_candidate_with_failed_logins(self):
+        event = SecurityEvent(
+            event_id="mitre-test-002",
+            source="cicids2017",
+            source_ip="192.168.1.25",
+            destination_ip="10.0.0.8",
+            destination_port=22,
+            protocol="TCP",
+            prediction="ATTACK",
+            confidence=0.91,
+            evidence={
+                "failed_login_count": 8
+            },
+        )
+
+        report = investigate_event(event)
+
+        self.assertEqual(
+            len(report["mitre_candidates"]),
+            1,
+        )
+
+        candidate = report["mitre_candidates"][0]
+
+        self.assertEqual(candidate["technique_id"], "T1110")
+        self.assertEqual(candidate["technique_name"], "Brute Force")
+        self.assertEqual(candidate["status"], "candidate")
+        self.assertEqual(candidate["confidence"], "medium")
 if __name__ == "__main__":
     unittest.main()
