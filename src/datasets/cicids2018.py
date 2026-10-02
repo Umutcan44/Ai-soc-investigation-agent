@@ -84,6 +84,13 @@ def iter_cicids2018(
                     .str.strip()
                 )
 
+                # Some CSE-CIC-IDS2018 CSV files contain repeated
+                # header rows inside the data. These rows have
+                # "Label" as the label value and are not observations.
+                selected = selected[
+                    selected["original_label"] != "Label"
+                ].copy()
+
                 selected["Label"] = (
                     selected["original_label"]
                     .map(normalize_label)
