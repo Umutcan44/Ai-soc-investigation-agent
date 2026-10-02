@@ -1,0 +1,105 @@
+{
+  "binary_labels": {
+    "ATTACK": 2748235,
+    "BENIGN": 13484708
+  },
+  "dataset": "CSE-CIC-IDS2018",
+  "features": {
+    "Average Packet Size": {
+      "nan": 0,
+      "negative_inf": 0,
+      "non_numeric": 0,
+      "positive_inf": 0
+    },
+    "Avg Bwd Segment Size": {
+      "nan": 0,
+      "negative_inf": 0,
+      "non_numeric": 0,
+      "positive_inf": 0
+    },
+    "Bwd Packet Length Max": {
+      "nan": 0,
+      "negative_inf": 0,
+      "non_numeric": 0,
+      "positive_inf": 0
+    },
+    "Bwd Packet Length Mean": {
+      "nan": 0,
+      "negative_inf": 0,
+      "non_numeric": 0,
+      "positive_inf": 0
+    },
+    "Bwd Packet Length Std": {
+      "nan": 0,
+      "negative_inf": 0,
+      "non_numeric": 0,
+      "positive_inf": 0
+    },
+    "Destination Port": {
+      "nan": 0,
+      "negative_inf": 0,
+      "non_numeric": 0,
+      "positive_inf": 0
+    },
+    "Max Packet Length": {
+      "nan": 0,
+      "negative_inf": 0,
+      "non_numeric": 0,
+      "positive_inf": 0
+    },
+    "Packet Length Mean": {
+      "nan": 0,
+      "negative_inf": 0,
+      "non_numeric": 0,
+      "positive_inf": 0
+    },
+    "Packet Length Std": {
+      "nan": 0,
+      "negative_inf": 0,
+      "non_numeric": 0,
+      "positive_inf": 0
+    },
+    "Packet Length Variance": {
+      "nan": 0,
+      "negative_inf": 0,
+      "non_numeric": 0,
+      "positive_inf": 0
+    },
+    "Subflow Fwd Bytes": {
+      "nan": 0,
+      "negative_inf": 0,
+      "non_numeric": 0,
+      "positive_inf": 0
+    }
+  },
+  "original_labels": {
+    "Benign": 13484708,
+    "Bot": 286191,
+    "Brute Force -Web": 611,
+    "Brute Force -XSS": 230,
+    "DDOS attack-HOIC": 686012,
+    "DDOS attack-LOIC-UDP": 1730,
+    "DDoS attacks-LOIC-HTTP": 576191,
+    "DoS attacks-GoldenEye": 41508,
+    "DoS attacks-Hulk": 461912,
+    "DoS attacks-SlowHTTPTest": 139890,
+    "DoS attacks-Slowloris": 10990,
+    "FTP-BruteForce": 193360,
+    "Infilteration": 161934,
+    "SQL Injection": 87,
+    "SSH-Bruteforce": 187589
+  },
+  "source_files": {
+    "Friday-02-03-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+    "Friday-16-02-2018_TrafficForML_CICFlowMeter.csv": 1048574,
+    "Friday-23-02-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+    "Thuesday-20-02-2018_TrafficForML_CICFlowMeter.csv": 7948748,
+    "Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv": 331100,
+    "Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+    "Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+    "Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+    "Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+    "Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv": 613071
+  },
+  "total_flows": 16232943
+}
