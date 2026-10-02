@@ -1,0 +1,151 @@
+{
+  "experiments": [
+    {
+      "accuracy": 0.984325,
+      "confusion_matrix": [
+        [
+          19416,
+          584
+        ],
+        [
+          43,
+          19957
+        ]
+      ],
+      "evaluation": "CICIDS2017 holdout",
+      "evaluation_type": "internal_holdout",
+      "f1": 0.9845341752793468,
+      "pr_auc": 0.9949903462000194,
+      "precision": 0.9715690570079354,
+      "recall": 0.99785,
+      "roc_auc": 0.9971913487499999,
+      "sample_size": 40000,
+      "training": "CICIDS2017"
+    },
+    {
+      "accuracy": 0.727285,
+      "confusion_matrix": [
+        [
+          92115,
+          7885
+        ],
+        [
+          46658,
+          53342
+        ]
+      ],
+      "evaluation": "CSE-CIC-IDS2018",
+      "evaluation_type": "cross_dataset",
+      "f1": 0.6617005836491406,
+      "pr_auc": 0.7978285013567872,
+      "precision": 0.871216946771849,
+      "recall": 0.53342,
+      "roc_auc": 0.8311422181999999,
+      "sample_size": 200000,
+      "training": "CICIDS2017"
+    },
+    {
+      "accuracy": 0.942,
+      "confusion_matrix": [
+        [
+          18662,
+          1338
+        ],
+        [
+          982,
+          19018
+        ]
+      ],
+      "evaluation": "CSE-CIC-IDS2018 holdout",
+      "evaluation_type": "internal_holdout",
+      "f1": 0.9425116463475072,
+      "pr_auc": 0.9608196784848233,
+      "precision": 0.9342699941049322,
+      "recall": 0.9509,
+      "roc_auc": 0.9680524125,
+      "sample_size": 40000,
+      "training": "CSE-CIC-IDS2018"
+    },
+    {
+      "accuracy": 0.825175,
+      "confusion_matrix": [
+        [
+          87860,
+          12140
+        ],
+        [
+          22825,
+          77175
+        ]
+      ],
+      "evaluation": "CICIDS2017",
+      "evaluation_type": "cross_dataset",
+      "f1": 0.8153078202995009,
+      "pr_auc": 0.8736011437045407,
+      "precision": 0.8640765828808151,
+      "recall": 0.77175,
+      "roc_auc": 0.92368016135,
+      "sample_size": 200000,
+      "training": "CSE-CIC-IDS2018"
+    },
+    {
+      "accuracy": 0.9823,
+      "confusion_matrix": [
+        [
+          19341,
+          659
+        ],
+        [
+          49,
+          19951
+        ]
+      ],
+      "evaluation": "CICIDS2017 holdout",
+      "evaluation_type": "multi_domain_holdout",
+      "f1": 0.9825658704752525,
+      "pr_auc": 0.9946582442551142,
+      "precision": 0.9680252304706454,
+      "recall": 0.99755,
+      "roc_auc": 0.996843105,
+      "sample_size": 40000,
+      "training": "CICIDS2017 + CSE-CIC-IDS2018"
+    },
+    {
+      "accuracy": 0.94335,
+      "confusion_matrix": [
+        [
+          18694,
+          1306
+        ],
+        [
+          960,
+          19040
+        ]
+      ],
+      "evaluation": "CSE-CIC-IDS2018 holdout",
+      "evaluation_type": "multi_domain_holdout",
+      "f1": 0.9438358201556536,
+      "pr_auc": 0.9601268291734304,
+      "precision": 0.9358104787181756,
+      "recall": 0.952,
+      "roc_auc": 0.96689078875,
+      "sample_size": 40000,
+      "training": "CICIDS2017 + CSE-CIC-IDS2018"
+    }
+  ],
+  "features": 11,
+  "interpretation": {
+    "cross_dataset_finding": "Internal holdout performance substantially exceeds cross-dataset performance, indicating dataset/domain shift.",
+    "limitation": "Multi-domain holdout performance does not demonstrate generalization to a third unseen dataset or production traffic.",
+    "multi_domain_finding": "Training on both known datasets produces strong holdout performance on both represented domains."
+  },
+  "model": "RandomForestClassifier",
+  "sampling": {
+    "per_dataset": {
+      "ATTACK": 100000,
+      "BENIGN": 100000
+    },
+    "random_seed": 42,
+    "strategy": "balanced binary reservoir sample"
+  }
+}

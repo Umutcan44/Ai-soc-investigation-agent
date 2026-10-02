@@ -9,3 +9,6 @@ __pycache__/
 data/raw/
 data/processed/
 results/generated/
+
+# Generated ML model artifacts
+model/*.joblib

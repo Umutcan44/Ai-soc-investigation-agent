@@ -1,0 +1,39 @@
+{
+  "model_type": "RandomForestClassifier",
+  "model_file": "rf_combined_cicids2017_2018.joblib",
+  "training_datasets": [
+    "CICIDS2017",
+    "CSE-CIC-IDS2018"
+  ],
+  "training_flows": 320000,
+  "training_class_counts": {
+    "BENIGN": 160000,
+    "ATTACK": 160000
+  },
+  "features": [
+    "Destination Port",
+    "Max Packet Length",
+    "Packet Length Mean",
+    "Packet Length Std",
+    "Packet Length Variance",
+    "Average Packet Size",
+    "Bwd Packet Length Max",
+    "Bwd Packet Length Mean",
+    "Bwd Packet Length Std",
+    "Avg Bwd Segment Size",
+    "Subflow Fwd Bytes"
+  ],
+  "feature_count": 11,
+  "random_seed": 42,
+  "sampling": "100k BENIGN + 100k ATTACK reservoir sample per dataset before 80/20 split",
+  "label_mapping": {
+    "BENIGN": 0,
+    "ATTACK": 1
+  },
+  "intended_use": "Research and portfolio SOC investigation pipeline.",
+  "limitations": [
+    "Training data is derived from CICIDS2017 and CSE-CIC-IDS2018 benchmark datasets.",
+    "Performance on production network traffic has not been validated.",
+    "Multi-domain holdout results do not establish generalization to unseen network environments."
+  ]
+}
